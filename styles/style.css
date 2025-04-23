@@ -470,7 +470,7 @@ text {
 }
 
 .ticket-content::before {
-  background-image: url(./assets/icons/div.ticket-wrapper.svg);
+  background-image: url("../assets/icons/div.ticket-wrapper.svg");
   content: "";
   display: block;
   left: -12px;
@@ -489,7 +489,7 @@ text {
 }
 
 .ticket-status::after {
-  background-image: url(./assets/icons/stub-end-grey.svg\ fill.svg);
+  background-image: url("../assets/icons/stub-end-grey.svg\ fill.svg");
   content: "";
   display: block;
   right: -4px;
@@ -684,7 +684,7 @@ text {
   }
 
   .ticket-content::before {
-    background-image: url(./assets/icons/stub-end-mobile-light.svg\ fill.svg);
+    background-image: url("../assets/icons/stub-end-mobile-light.svg\ fill.svg");
     content: "";
     display: block;
     left: 0px;
@@ -706,7 +706,7 @@ text {
   }
 
   .ticket-status::after {
-    background-image: url(./assets/icons/stub-end-mobile-grey.svg\ fill.svg);
+    background-image: url("../assets/icons/stub-end-mobile-grey.svg\ fill.svg");
     content: "";
     display: block;
     left: 0px;
