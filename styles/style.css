@@ -190,6 +190,7 @@ body {
 /* Logo */
 
 .circle-container {
+  overflow: hidden;
   position: relative;
   width: clamp(162px, 18vw, 348px);
   height: clamp(162px, 18vw, 348px);
@@ -216,6 +217,7 @@ body {
   height: 100%;
   animation: rotate 45s linear infinite;
   transform-origin: center;
+  transform-box: fill-box;
 }
 
 @keyframes rotate {
@@ -410,6 +412,7 @@ text {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 80px;
+  gap: 20px;
 }
 
 .tickets-title {
@@ -427,6 +430,8 @@ text {
 }
 
 .tickets .circle-container {
+  margin-left: auto;
+  margin-right: clamp(0px, (1390px - 100vw) * 1, 25px);
   width: clamp(100px, 25vw, 347px);
   height: clamp(100px, 25vw, 347px);
   bottom: 0;
@@ -447,7 +452,7 @@ text {
   overflow: hidden;
   display: flex;
   flex-direction: row;
-  margin: 0 15px;
+  /* margin: 0 15px; */
   /* width: calc(100% - 30px); */
   box-shadow: 0 11px 6px -4px rgba(0, 0, 0, 0.1);
 }
@@ -747,7 +752,7 @@ text {
   .container {
     padding-right: 24px;
     padding-left: 24px;
-    max-width: 390px;
+    /* max-width: 390px; */
   }
 
   .header {
