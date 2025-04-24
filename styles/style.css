@@ -42,7 +42,7 @@ body {
   max-width: 1320px;
 }
 
-/* ======================== COOKIES ============================= */
+/* =============== COOKIES =============== */
 
 .cookies_banner {
   display: flex;
@@ -108,9 +108,9 @@ body {
   text-decoration: underline;
 }
 
-/* ========================== End of COOKIES ============================= */
+/* =============== End of COOKIES =============== */
 
-/* ============================ HEADER ========================== */
+/* =============== HEADER =============== */
 
 .header {
   display: flex;
@@ -141,9 +141,9 @@ body {
   cursor: pointer;
 }
 
-/* ========================== End of HEADER ========================== */
+/* =============== End of HEADER =============== */
 
-/* ========================== HERO Section ========================== */
+/* =============== HERO  =============== */
 
 .hero {
   background-color: #eaeaea;
@@ -191,7 +191,7 @@ body {
   gap: 0px clamp(20px, 6vw, 85px);
 }
 
-/* Logo */
+/* =============== LOGO =============== */
 
 .circle-container {
   overflow: hidden;
@@ -244,7 +244,7 @@ text {
   font-size: 22px;
 }
 
-/* End Logo */
+/* =============== End of LOGO =============== */
 
 .button {
   line-height: 1.1;
@@ -268,9 +268,9 @@ text {
   background-color: #5b5b5b;
 }
 
-/* ========================== End of HERO ========================== */
+/* =============== End of HERO =============== */
 
-/* ========================== OUR SPEAKERS ========================== */
+/* =============== SPEAKERS =============== */
 
 .speakers {
   background-color: #eaeaea;
@@ -327,8 +327,8 @@ text {
 
 .section-title {
   color: #212529;
-  text-align: center;
   font-size: clamp(35px, 6vw, 59px);
+  text-align: center;
   font-weight: 900;
   line-height: 1;
   text-transform: uppercase;
@@ -402,6 +402,10 @@ text {
   text-transform: uppercase;
 }
 
+/* =============== End of SPEAKERS =============== */
+
+/* =============== TICKETS =============== */
+
 .tickets {
   background-color: #fbdb3c;
   padding-top: clamp(80px, 10vw, 160px);
@@ -438,8 +442,6 @@ text {
   bottom: 0;
 }
 
-/** Tickets  **/
-
 .tickets-list {
   display: flex;
   flex-direction: column;
@@ -451,8 +453,6 @@ text {
   overflow: hidden;
   display: flex;
   flex-direction: row;
-  /* margin: 0 15px; */
-  /* width: calc(100% - 30px); */
   box-shadow: 0 11px 6px -4px rgba(0, 0, 0, 0.1);
 }
 
@@ -578,7 +578,9 @@ text {
   width: clamp(240px, 15vw, 300px);
 }
 
-/* FEATURES */
+/* =============== End of TICKETS =============== */
+
+/* =============== FEATURES =============== */
 
 .features {
   background-color: #323232;
@@ -623,10 +625,13 @@ text {
   margin-bottom: 37px;
 }
 
+.text {
+  font-size: 18px;
+  line-height: 1.65;
+}
+
 .feature-text {
   color: #fff;
-  font-size: 18px;
-  line-height: 1.7;
 }
 
 .feature-text:not(:last-child) {
@@ -639,6 +644,71 @@ text {
   height: auto;
 }
 
+/* =============== End of FEATURES =============== */
+
+/* =============== REASONS =============== */
+
+.reasons {
+  background-color: #eaeaea;
+  padding-top: clamp(77px, 10vw, 160px);
+  padding-bottom: 160px;
+}
+
+.reasons .section-title {
+  margin-bottom: clamp(57px, 10vw, 88px);
+}
+
+.reasons-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(112px, 5vw, 160px);
+}
+
+.reasons-item {
+  display: flex;
+  gap: 24px;
+  align-items: start;
+}
+
+.reasons-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.reasons-number {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.reasons-title {
+  color: #323232;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 29px;
+  text-transform: uppercase;
+  margin-top: -35px;
+}
+
+.reasons-content {
+  width: 100%;
+}
+
+.reasons-text {
+  color: #323232;
+}
+.reasons-img__wrapper {
+  width: 100%;
+}
+.reasons-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* =============== End of REASONS =============== */
+
 /*  */
 
 .faq-section {
@@ -650,6 +720,12 @@ text {
 @media screen and (max-width: 1024px) {
   .feature-item {
     align-items: start;
+  }
+
+  .reasons-list,
+  .reasons-item:nth-child(even),
+  .reasons-item {
+    flex-direction: column;
   }
 }
 
@@ -931,6 +1007,10 @@ text {
   .ticket-divider::after {
     left: auto;
     right: 0;
+  }
+
+  .reasons-item {
+    gap: 21px;
   }
 }
 
