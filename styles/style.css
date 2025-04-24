@@ -175,8 +175,12 @@ body {
   flex: 1 1 60%;
 }
 
-.hero-description p:first-child {
+.hero-description p:nth-child(1) {
   margin-bottom: 26px;
+}
+
+.hero-description p:nth-child(2) {
+  margin-bottom: clamp(49px, 2vw, 57px);
 }
 
 .hero-container {
@@ -256,7 +260,7 @@ text {
 .hero-btn {
   font-size: 19.5px;
   padding: 22.1px 36.1px;
-  margin-top: 57px;
+  /* margin-top: 57px; */
   transition: all 0.15s ease-in-out;
 }
 
@@ -270,7 +274,7 @@ text {
 
 .speakers {
   background-color: #eaeaea;
-  padding-bottom: 304px;
+  padding-bottom: clamp(204px, 17vw, 304px);
 }
 
 .bg-wrapper {
@@ -331,7 +335,7 @@ text {
 }
 
 .speakers-container {
-  padding-top: 80px;
+  padding-top: clamp(10px, 10vw, 80px);
 }
 
 .speakers-list {
@@ -400,11 +404,8 @@ text {
 
 .tickets {
   background-color: #fbdb3c;
-}
-
-.tickets .container {
-  padding-top: 160px;
-  padding-bottom: 80px;
+  padding-top: clamp(80px, 10vw, 160px);
+  padding-bottom: clamp(121px, 10vw, 184px);
 }
 
 .tickets-logo_wrapper {
@@ -581,11 +582,36 @@ text {
 
 .features {
   background-color: #323232;
-  padding-top: 160px;
+  padding-top: clamp(80px, 10vw, 160px);
+  padding-bottom: clamp(109px, 10vw, 176px);
 }
 
 .features-list {
   display: grid;
+  gap: clamp(40px, calc(100vw * -0.07 + 140px), 69px);
+}
+
+.feature-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(47px, 5vw, 80px);
+}
+
+.feature-item:nth-child(even) {
+  grid-template-areas: "feature-img feature-content";
+}
+
+.feature-item:nth-child(odd) {
+  grid-template-areas: "feature-content feature-img";
+}
+
+.feature-content {
+  grid-area: feature-content;
+}
+
+.feature-img {
+  grid-area: feature-img;
 }
 
 .feature-title {
@@ -601,10 +627,13 @@ text {
   color: #fff;
   font-size: 18px;
   line-height: 1.7;
+}
+
+.feature-text:not(:last-child) {
   margin-bottom: 26px;
 }
 
-.feature-img {
+.feature-img img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -617,6 +646,12 @@ text {
 }
 
 /*  */
+
+@media screen and (max-width: 1024px) {
+  .feature-item {
+    align-items: start;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .hero-container {
@@ -661,9 +696,9 @@ text {
 
   .speakers-list {
     display: flex;
-    column-gap: 40px;
+    /* column-gap: 40px; */
     row-gap: 68px;
-    justify-content: center;
+    justify-content: space-around;
   }
 
   .speaker-items {
@@ -684,6 +719,10 @@ text {
   }
 
   /** TICKETS **/
+
+  .tickets-list {
+    gap: 34px;
+  }
 
   .tickets-item {
     flex-direction: column;
@@ -743,13 +782,28 @@ text {
     margin-right: clamp(19px, 2vw, 60px);
     margin-left: clamp(19px, 2vw, 63px);
   }
+
+  .feature-item {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .feature-item:nth-child(even),
+  .feature-item:nth-child(odd) {
+    grid-template-areas:
+      "feature-img"
+      "feature-content";
+  }
+
+  .feature-content {
+    max-width: 596px;
+  }
 }
 
 @media screen and (max-width: 390px) {
   .container {
     padding-right: 24px;
     padding-left: 24px;
-    /* max-width: 390px; */
   }
 
   .header {
@@ -774,6 +828,9 @@ text {
 
   .hero {
     padding-top: 105px;
+    padding-bottom: 240px;
+    background-position-y: -7px;
+    background-position-x: -928px;
   }
 
   .hero-title {
@@ -781,9 +838,9 @@ text {
   }
 
   .cta-block {
-    padding-right: 43px;
-    padding-left: 43px;
-    top: -145px;
+    padding-right: 48px;
+    padding-left: 48px;
+    top: -170px;
   }
 
   .cta-btn {
@@ -796,9 +853,13 @@ text {
     padding-bottom: 100px;
   }
 
+  .speakers-container {
+    padding-top: 0px;
+  }
+
   .speaker-items {
     text-align: center;
-    width: 342px;
+    width: 100%;
   }
 
   .speaker-items:nth-child(2n) {
@@ -809,8 +870,8 @@ text {
     transform: translateY(0);
   }
 
-  .tickets .container {
-    padding-top: 80px;
+  .tickets-logo_wrapper {
+    margin-bottom: 88px;
   }
 
   .tickets .circle-container {
@@ -825,13 +886,9 @@ text {
     width: 100%;
   }
 
-  .tickets-list {
-    gap: 34px;
-  }
-
   .ticket-content {
     flex-direction: column;
-    padding: 50px 27px;
+    padding: 55px 27px;
   }
 
   .ticket-content::before {
